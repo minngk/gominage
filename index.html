@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゴミ投げゲーム - Trash Throw Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="scoreBoard">
+            <div id="scoreSection">
+                <span>スコア: </span>
+                <span id="currentScore">0</span>
+            </div>
+            <div id="highScoreSection">
+                <span>ハイスコア: </span>
+                <span id="highScore">0</span>
+            </div>
+            <div id="currentTrashType">
+                <span>現在: </span>
+                <span id="trashIcon">📄</span>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="1200" height="600"></canvas>
+        
+        <div id="instructions">
+            <p>ゴミをドラッグしてゴミ箱に投げ入れよう！</p>
+            <p>📄 紙くず:1点 | 🍪 お菓子:2点 | 🐭 ネズミ:5点(猫が邪魔) | 🎊 紙吹雪:3点(成功後)</p>
+            <p>入ったら紙吹雪が降って、次は紙吹雪を投げるよ！</p>
+        </div>
+        
+        <button id="resetButton">ゲームリセット</button>
+    </div>
+
+    <script src="js/physics.js"></script>
+    <script src="js/trash.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
